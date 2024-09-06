@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #001c8d;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 17px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .forgot-password a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-login {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-login:hover {
+            background-color: #0056b3;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .social-login button {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .social-login button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .signup-link {
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+        
+        <div class="social-login">
+            <button class="google-login">
+                <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Logo">
+                <a href="https://accounts.google.com" target="_self">Google</a>
+            </button>
+
+            <button class="facebook-login">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                    alt="Facebook Logo">
+                <a href="https://id-id.facebook.com/login.php/" target="_self">Facebook</a>
+            </button>
+        </div>
+        <div class="signup-link">
+            <p>don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+</body>
+</html>
